@@ -1,0 +1,990 @@
+/*
+
+Theme Name: X &ndash; Child Theme
+Theme URI: http://theme.co/x/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to X in this child theme.
+Version: 1.0.0
+Template: x
+
+*/
+/*Controlling the width of the layout's body */
+@import url('bootstrap/css/bootstrap.min.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+@import url('http://fonts.googleapis.com/css?family=Raleway');
+@import url('fonts/fontello-ab449ae0/css/animation.css');
+
+@font-face {
+    font-family: 'pencilpete_fontregular';
+    src: url('fonts/ppetrial-webfont.eot');
+    src: url('fonts/ppetrial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ppetrial-webfont.woff') format('woff'),
+         url('fonts/ppetrial-webfont.ttf') format('truetype'),
+         url('fonts/ppetrial-webfont.svg#pencilpete_fontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***** FONTELLO CODES ---- DO NOT TOUCH *****/
+@font-face {
+      font-family: 'fontello';
+      src: url('fonts/fontello/font/fontello.eot?82643816');
+      src: url('fonts/fontello/font/fontello.eot?82643816#iefix') format('embedded-opentype'),
+           url('fonts/fontello/font/fontello.woff?82643816') format('woff'),
+           url('fonts/fontello/font/fontello.ttf?82643816') format('truetype'),
+           url('fonts/fontello/font/fontello.svg?82643816#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+        font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+
+    font-size: 475%;
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-top: 21%;
+      margin-bottom: 26%;
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+        
+        
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+
+.x-navbar {
+    background-color: rgba(30, 30, 30, 0.3);
+    border: none;
+    box-shadow: none;
+}
+.x-navbar .desktop .x-nav > li > a {
+    color: #FFF !important;
+}
+.x-container>.offset {
+	width: 75%;
+}
+body {
+    background-color: #FFFFFF;
+    font-family: "Raleway";
+}
+.carousel {
+    margin-top: -8%;
+    
+}
+.carousel-inner > .item {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+          transform: translate3d(0, 0, 0) !important;
+  overflow: hidden;
+}
+.carousel-inner > .item:first-of-type {
+  position: relative;
+}
+.carousel-inner > .active {
+  opacity: 1;
+  z-index: 3;
+}
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  -webkit-transition: opacity 0.9s ease-in-out;
+       -o-transition: opacity 0.9s ease-in-out;
+          transition: opacity 0.9s ease-in-out;
+  opacity: 1;
+  left: 0;
+  z-index: 2;
+}
+.carousel-inner > .active.left,
+.carousel-inner > .active.right {
+  z-index: 1;
+}
+.carousel-control {
+  z-index: 4;
+}
+#my-carousel .carousel-inner .item {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+#my-carousel .carousel-inner .slider-1 {
+    background: url(img/11.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#my-carousel .carousel-inner .slider-2 {
+    background: url(img/3.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#my-carousel .carousel-inner .slider-3 {
+    background: url(img/6.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#my-carousel .carousel-inner .slider-4 {
+    background: url(img/9.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#carousel-section {
+    height: 809px;
+    margin-top: -2%
+}
+#my-carousel h1 {
+    color: #000;
+    padding-top: 18%;
+    font-size: 450%;
+}
+.item span {
+    padding: 1% 12% 1% 12%;
+    display: inline-block;
+}
+.btns {
+    margin-left: 0%;
+}
+.carousel-inner a.donate-call {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.8% 4% 1% 4%;
+    font-size: 200%;
+    border: 1px solid #FFF;
+    color: #000;
+    font-weight: bolder;
+}
+.volunteer-btn {
+    margin-right: 0%;
+    
+}
+.volunteer-btn span {
+    color: #5EFC8D;
+    font-size: 180%;
+}
+.volunteer-btn span:hover {
+    color: #5EFC8D;
+    font-size: 202%;
+    text-decoration: underline;
+}
+.donate-btn {
+    margin-left: 0%;
+}
+.donate-btn span {
+    color: #F25757;
+    font-size: 180%;
+}
+.donate-btn span:hover {
+    color: #F25757;
+    font-size: 202%;
+    text-decoration: underline;
+}
+.how-to-help {
+    background-color: #000;
+    color: red;
+}
+.how-to-help .title {
+    border-right: 3px solid red;
+    color: #FFF;
+}
+.how-to-help h4.title {
+    border: none;
+} 
+.how-to-help h4 {
+    margin-top: 12%;
+    margin-bottom: 12%;
+    font-weight: bolder;
+    font-size: 170%;
+    color: #CE0001;
+}
+#theProjectHome .description {
+    color: #FFF;
+    font-size: 161%;
+    padding: 1% 7% 1% 1%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+#theProjectHome h1 {
+    margin-top: 0;
+    color: #FCEC52;
+}
+#theProjectHome .icon {
+    margin-top: 10%;
+    font-size: 1624%;
+    color: #FCEC52;
+}
+.our-components h1 {
+    margin-top: 9%;
+    color: #61E8E1;
+}
+.our-components .description {
+    color: #EBF5EE;
+    font-size: 161%;
+    padding: 1% 13% 1% 13%;
+    margin-top: 16%;
+    margin-left: 6%;
+}
+.our-components .icon {
+    margin-top: 10%;
+    font-size: 1624%;
+    color: #61E8E1;
+}
+.madrasahs h1 {
+    margin-top: 9%;
+    color: #5EFC8D;
+}
+.madrasahs .description {
+    color: #FFF;
+    font-size: 161%;
+    padding: 1% 8% 1% 6%;
+    margin-top: 9%;
+    margin-bottom: 11%;
+    margin-left: -3%;
+}
+.madrasahs .icon {
+    margin-top: 13%;
+    font-size: 1624%;
+    color: #5EFC8D;
+}
+.nibras {
+    background: url(img/nibras.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.madinatul-ulum {
+    background: url(img/madinatul.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.nibras, .madinatul-ulum {
+    padding: 10% 19% 8% 22%;
+}
+.nibras .madrasah-name {
+    font-size: 298%;
+}
+.madinatul-ulum .madrasah-name {
+    font-size: 298%;
+}
+.nibras .madrasah-details {
+    font-size: 150%;
+}
+.madinatul-ulum .madrasah-details {
+    font-size: 150%;
+}
+
+.nibras .text h4, .madinatul-ulum .text h4 {
+    font-size: 222%;
+}
+.nibras .text p, .madinatul-ulum .text p {
+    font-size: 124%;
+}
+.nibras .text p {
+    margin-top: 11%;
+}
+.madrasah-list {
+    padding: 0 0 0 0;
+    margin-bottom: 5%;
+}
+.description .main-container {
+    margin-top: 9%;
+}
+.components {
+}
+.about-lb span {
+    border: 1px solid #FCEC52;
+    color: #FCEC52;
+    padding: 2% 3% 1% 3%;
+}
+.about-lb span:hover {
+    text-decoration: underline;
+}
+a.about-lb {
+    text-decoration: none !important;
+}
+.madrasah-lb span {
+    border: 1px solid #FFF;
+    color: #5EFC8D;
+    padding: 2% 3% 1% 3%;
+}
+.madrasah-lb span:hover {
+    border: 1px solid #5EFC8D;
+    color: #5EFC8D;
+    padding: 2% 3% 1% 3%;
+    text-decoration: underline;
+}
+a.madrasah-lb {
+    text-decoration: none !important;
+}
+.description div {
+    margin-top: 13%;
+}
+#ourComponents {
+
+}
+
+div.each{
+    padding: 4% 4% 4% 4%;
+    margin-bottom: 5%;
+}
+.each {
+    color: #61E8E1;
+}
+.each h3 {
+}
+.each h3:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+.each p:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+.component-learn-more span {
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 5% 11% 4% 11%;
+    margin-top: 3%;
+    font-size: 135%;
+}
+a.component-learn-more {
+    text-decoration: none !important;
+}
+.component-learn-more span:hover {
+    border: 1px solid #61E8E1;
+    color: #61E8E1;
+    padding: 5% 11% 4% 11%;
+    margin-top: 3%;
+    font-size: 135%;
+    text-decoration: none;
+}
+.fa {
+    margin-right: 3%;
+}
+#madrasahs {
+    background: url(img/2.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 10%
+}
+.nibras-bg {
+    background: url(img/nibras.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.madinatul-bg {
+    background: url(img/nibras.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.floating-image-1 {
+    background: url(img/7.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.floating-image-1 h1 {
+    padding: 17% 0 17% 0;
+    font-size: 345%;
+}
+footer {
+     position: fixed;
+    top: 0;
+}
+footer.x-colophon {
+    background-color: rgba(30, 30, 30, 1.0);
+}
+body {
+    background: url(img/blackboard-4.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'pencilpete_fontregular';
+    color: #FFF;
+}
+.landing-page {
+    color: #FFF;
+}
+.x-colophon.top {
+    padding: 0;
+}
+.x-colophon.bottom {
+    text-align: inherit;
+    border: none;
+    box-shadow: none;
+}
+.x-colophon {
+    border: none;
+}
+.blackboard h1 {
+    margin-top: 8%;
+    font-size: 1527%;
+    letter-spacing: 6px;
+}
+.blackboard h4 {
+    font-size: 250%;
+    color: #DDFCAD;
+}
+.blackboard h3 {
+    font-size: 380%;
+}
+.links {
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+.links a {
+    font-size: 188%;
+    margin: 3%;
+    color: #FFF;
+}
+.links a:hover {
+    text-decoration: none;
+}
+.volunteer-link {
+    color: #5EFC8D;
+}
+.donation-link {
+    color: #FCEC52;
+}
+.auction-link {
+    color: #E58F65;
+}
+a .volunteer-link:hover {
+    color: #5EFC8D;
+    border-bottom: 1px solid #5EFC8D;
+}
+a .donation-link:hover {
+    color: #FCEC52;
+    border-bottom: 1px solid #FCEC52;
+}
+a .auction-link:hover {
+    color: #E58F65;
+    border-bottom: 1px solid #E58F65;
+}
+.x-navbar .desktop .x-nav > li > a > span {
+    font-size: 150%;
+    color: #DDFCAD;
+}
+.x-colophon.bottom h4 {
+    font-size: 225%;
+    color: #DDFCAD;
+}
+.x-colophon.bottom span {
+    font-size: 82%;
+    color: #DDFCAD;
+}
+.fa {
+    margin: 0 1% 0 1%;
+}
+.fa-facebook-square:before {
+    color: #3b5998;
+}
+.fa-twitter {
+    color: #61E8E1;
+}
+.auction-page-details {
+    
+}
+.auction-page-details h1 {
+    color: #FFF;
+    font-size: 572%;
+}
+.auction-image {
+    
+}
+.auction-description p  {
+    color: #FCEC52;
+    padding: 2% 9% 4% 9%;
+    font-size: 155%;
+}
+.auction-story-heading {
+    font-size: 379%;
+    margin: 8% 0 2% 0;
+}
+center {
+    display: none;
+    padding: -3%;
+}
+.page-heading h1 {
+    color: #DDFCAD;
+    font-size: 685%;
+    margin-top: 3%;
+}
+.page-description {
+    margin: 4% 10% 15% 10%;
+}
+.page-description .email {
+    color: #E58F65;
+}
+.contact-details {
+   margin: 6% 0 12% 0;
+}
+h4.office, h4.email, h4.phone {
+    font-size: 180%;
+}
+.office i, .email i, .phone i {
+    padding-right: 3%;
+}
+.contact-page-details {
+    margin-top: 25%;
+}
+.contact-details-footer {
+    margin-bottom: 7%;
+}
+.contact-text {
+    margin-top: 57%;
+    margin-bottom: 67%;
+}
+.contact h1 {
+    font-size: 324%;
+}
+.volunteer .fa-envelope {
+    color: #6DAF76;
+    font-size: 480%;
+}
+.donate .fa-facebook-square {
+    font-size: 480%;
+}
+a.facebook-page-link {
+    color: #E58F65;
+}
+a.facebook-page-link:hover {
+    border-bottom: 1px solid #E58F65;
+    text-decoration: none;
+    color: #E58F65;
+}
+.about-picture-1 {
+    background: url(img/14.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.how-it-works, .vision, .history, .the-project {
+    margin-bottom: 4%;
+}
+.how-it-works h1, .vision h1, .history h1, .the-project h1 {
+    margin-bottom: 4%;
+}
+.how-it-works h2, .vision h2, .history h2, .the-project h2 {
+    font-size: 740%;
+    color: #CDCDCD;
+}
+.how-it-works h1, .vision h1, .history h1, .the-project h1 {
+    font-size: 600%;
+    color: #CDCDCD;
+}
+.how-it-works h3, .vision h3, .history h3, .the-project h3 {
+    font-size: 550%;
+    color: #CDCDCD;
+}
+.the-project h1 {
+    color: #E58F65;
+}
+.how-it-works h1 {
+    color: #6DAF76;
+}
+.vision h1 {
+    color: #FCEC52;
+}
+.history h1 {
+    color: #61E8E1;
+}
+.explanation-0 {
+    font-size: 152%;
+}
+.explanation-1 {
+    font-size: 152%;
+}
+.explanation-2 {
+    font-size: 152%;
+}
+.explanation-3 {
+    font-size: 152%;
+}
+.explanation-0, .explanation-1, .explanation-2, .explanation-3 {
+    padding: 0 10% 0 10%;
+    color: #CDCDCD;
+}
+.bidding-form {
+    padding: 4% 12% 8% 12%;
+}
+.bidding-form .input-group {
+    padding-bottom: 3%;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 2.76em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #6DAF76;
+}
+.input-group-addon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #5EFC8D; 
+    font-size: 150%;
+}
+.bidButton {
+    padding-left: 0;
+}
+.bidButton .btn {
+    padding: 1.5% 6% 1.5% 6%;
+}
+.copyright {
+    font-size: 203%;
+    margin-top: 1%;
+}
+.input-group-btn:last-child>.btn {
+    font-size: 27px;
+    width: 102%;
+}
+.instructions {
+    margin-top: 4%;
+}
+.instruct-details a span {
+    color: #E58F65;
+}
+.instruct-details a span:hover {
+    color: #E58F65;
+    border-bottom: 1px solid #E58F65;
+    text-decoration: none;
+}
+.prev-bid {
+    margin-top: 1%;
+    color: #dbdbdb;
+    margin-left: -3%;
+}
+.prev-bid h3 {
+    font-size: 120%;
+    font-family: "Open Sans";
+}
+.prev-bid p {
+    font-size: 168%;
+    margin-top: 5%;
+    font-family: "Open Sans";
+}
+.auction-countdown {
+    margin-top: 1%
+}
+.countdownTimer .counterTable {
+    margin: 4% 0 0 0;
+}
+.error-message {
+    margin-top: 1%;
+    font-size: 171%;
+    color: #E58F65;
+}
+.faq .faq-auction {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.faq .auction-info {
+    padding: 2% 5% 2% 5%;
+}
+.faq .auction-info h3 {
+    color: #E58F65;
+}
+.faq .auction-info p {
+    font-size: 150%;
+}
+.icon-sort-alphabet {
+    color: #3b5998;
+    margin-top: 9%;
+}
+.icon-users {
+    color: #FCEC52;
+}
+.icon-heart {
+    color: #F25757
+}
+.icon-laptop {
+    color: #5EFC8D;
+}
+.main-container {
+    padding: 0 9% 0 4%;
+}
+.social-media {
+    margin-top: 57%;
+}
+.visit {
+    margin-top: 57%;
+    font-size: 168%;
+}
+.footer-nav {
+    margin-top: 57%;
+    font-size: 168%;
+}
+.contact h2 {
+    color: #F25757;
+}
+#components .demo-icon {
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+#components .details {
+    padding: 0 12% 0 12%;
+    font-size: 138%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.bids {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0 6% 0 6%;
+    font-size: 120%;
+}
+#appView {
+    margin: 0;
+}
+select {
+    width: 100%;
+}
+option {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+.partners-section h1 {
+    margin-top: 8%;
+    font-size: 317%;
+    color: #F88F65;
+}
+.partners-section .caption h3 {
+    color: #FCEC52;
+}
+.partners-section .partner .img-wrapper{height:153px;position:relative;}
+.partners-section .partner img{max-width:100%;max-height:100%;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+.partner {
+    margin: 8% 0 11% 0;
+}
+.team-members {
+    margin: 8% 0 8% 0;
+}
+.thumbnail {
+    display: inline-table;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-size: 134%;
+}
+.thumbnail>img {
+    width: 59%;
+    border-radius: 18%;
+}
+.thumbnail h3 {
+    color: #F88F65;
+} .thumbnail p {
+    color: #EBF5EE;
+}
+/*** GOOGLE MAPS CODE ***/
+.google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+/*** Responsiveness Code ***/
+.x-btn-navbar.collapsed {
+    background-color: rgba(255, 255, 255, 0.0);
+    box-shadow: none;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .blackboard h1 {
+        font-size: 727%;
+        margin-top: 29%;
+    }
+    .blackboard h4 {
+        font-size: 205%;
+    }
+    .blackboard h3 {
+        font-size: 203%;
+        margin-bottom: 18%;
+    }
+    .pull-right {
+        
+    }
+    .page-heading h1 {
+        font-size: 500%;
+        margin-top: 17%;
+    }
+    .auction-story {
+        padding: 0;
+    }
+    .auction-page-details h1 {
+        color: #FFF;
+        margin-top: 19%;
+        margin-bottom: 17%;
+        font-size: 285%;
+    }
+    .auction-description {
+        padding: 0 7% 0 7%;
+    }
+    .auction-description p {
+        padding: 0;
+        font-size: 140%;
+    }
+    .auction-countdown {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .instruct-details {
+        margin-bottom: 5%;
+    }
+    .bidAmount {
+        font-size: 70%;
+    }
+    .input-group-btn:last-child>.btn {
+        font-size: 27px;
+        width: 107%;
+    }
+    .contact-text {
+        padding-left: 0;
+        margin-bottom: 27%;
+    }
+    .how-it-works, .vision, .history, .the-project {
+        margin-bottom: 19%;
+    }
+    .how-it-works h1, .vision h1, .history h1, .the-project h1 {
+        margin-bottom: 4%;
+        font-size: 380%;
+    }
+    .the-project h1 {
+        margin-top: 15%;
+        color: #E58F65;
+    }
+    .how-it-works h1 {
+        color: #6DAF76;
+    }
+    .vision h1 {
+        color: #FCEC52;
+    }
+    .history h1 {
+        color: #61E8E1;
+    }
+    .explanation-0, .explanation-1, .explanation-2, .explanation-3 {
+        padding: 0 2% 0 2%;
+        color: #CDCDCD;
+        font-size: 140%;
+    }
+    .carousel {
+        margin-top: -24%;
+    }
+    #my-carousel h1 {
+        color: #000;
+        padding-top: 55%;
+        font-size: 400%;
+    }
+    #theProjectHome .description {
+        padding: 1% 5% 1% 5%;
+    }
+    #theProjectHome .icon {
+        margin-top: 24%;
+        font-size: 1366%;
+    }
+    .floating-image-1 h1 {
+        padding: 36% 0 33% 0;
+        font-size: 267%;
+    }
+    .our-components .description {
+        padding: 1% 0 1% 0;
+    }
+    .component-learn-more span {
+        padding: 5% 27% 4% 25%;
+    }
+    .main-container {
+        margin-bottom: 17%;
+    }
+    .our-components .icon {
+        font-size: 1366%;
+    }
+    .madrasahs .icon {
+        margin-top: 24%;
+        font-size: 1366%;
+    } 
+    .madrasahs .description {
+        padding: 1% 5% 1% 8%;
+        margin-bottom: 27%;
+    }
+    .partners-section h1 {
+        margin-top: 22%;
+    }
+    .partner-member {
+        margin: 10% 0 19% 0;
+    }
+    .contact-text {
+        margin-top: 24%;
+    }
+    .footer-nav {
+        margin-top: 26%;
+    }
+    .visit {
+        margin-top: 24%;
+    }
+    .social-media {
+        margin-top: 13%;
+    }
+    .bid-details  h2{
+        font-size: 183%;
+    }
+    .bid-details p {
+        font-size: 183%;
+    }
+    .thumbnail>img {
+        width: 64%;
+        border-radius: 15%;
+    }
+    .team-members {
+        margin: 8% 0 19% 0;
+    }
+}
